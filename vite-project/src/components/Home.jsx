@@ -1,6 +1,13 @@
+import {useNavigate} from "react-router-dom"
 
 
 const Home = () => {
+  const navigate = useNavigate();
+  
+  
+   
+    
+  
   const products = [
     { name: 'saurabh', id: 2,years:23 },
     { name: 'vinit', id: 1 ,years:20},
@@ -11,10 +18,14 @@ const Home = () => {
       {product.name} is {product.years } yrs old
     </li>
   );
-  
+
   
   return (
+    <>
     <ul>{listItems}</ul>
+    <button onClick={()=>navigate('/about')}>click me</button>
+    
+    </>
   );
 }
 
